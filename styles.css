@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    background-color: aqua;
+}
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(10, 40px);
+    gap: 1px;
+    margin: 0 20px;
+    position: relative;
+    width: 410px;
+    height: 410px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.player {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.player1 {
+    background-color: red;
+}
+
+.player2 {
+    background-color: blue;
+}
+
+.snake, .ladder {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+}
+
+.snake {
+    background-image: url('snake.png'); /* Make sure to have snake.png in the correct path */
+}
+
+.ladder {
+    background-image: url('ladder.png'); /* Make sure to have ladder.png in the correct path */
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info h3 {
+    margin-bottom: 10px;
+}
